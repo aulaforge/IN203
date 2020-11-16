@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "Je suis le rang " << rang << " et je renvoie le jeton " << jeton << "." << std::endl;
 		MPI_Send(&jeton, 1, MPI_INT, 1, tag, MPI_COMM_WORLD);
 		MPI_Recv(&jeton, 1, MPI_INT, nombre_de_processus - 1, tag, MPI_COMM_WORLD, &status);
-		std::cout << "[ " << rang << " ]" << "J'ai reçu le jeton " << jeton <<"."<< std::endl;
+		std::cout << "[ " << rang << " ]" << "J'ai reÃ§u le jeton " << jeton <<"."<< std::endl;
 	}
 
 	else {
